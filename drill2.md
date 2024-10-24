@@ -22,6 +22,11 @@ mountblue@mountblue-pc:~/harrypotter$ head -n 3 'Harry Potter and the Goblet of 
 
 #### Output will be :- 
 
+Harry Potter and the Goblet of Fire
+　　By J.K. Rowling
+
+
+
 
 
 ## 3.Print the last 10 lines in the book
@@ -29,20 +34,41 @@ mountblue@mountblue-pc:~/harrypotter$ head -n 3 'Harry Potter and the Goblet of 
 To print last 10 line we start from tail part and move upto limit of 10
 
 
-mountblue@mountblue-pc:~/harrypotter$ tail -n 10 'Harry Potter and the Goblet of Fire.txt' 
+mountblue@mountblue-pc:~/harrypotter$ tail -n 10 'Harry Potter and the Goblet of Fire.txt'
+
+Output ->
+
+　　and Goyle, who were still lying on the floor, covered in hex marks.
+　　Uncle Vernon was waiting beyond the barrier. Mrs. Weasley was close by him. She hugged Harry very tightly when she saw him and whispered in his ear, "I think Dumbledore will let you come to us later in the summer. Keep in touch, Harry."
+　　"See you. Harry," said Ron, clapping him on the back.
+　　"'Bye, Harry!" said Hermione, and she did something she had never done before, and kissed him on the cheek.
+　　"Harry - thanks," George muttered, while Fred nodded fervently at his side.
+　　Harry winked at them, turned to Uncle Vernon, and followed him silently from the station.
+　　There was no point worrying yet, he told himself, as he got into the back of the Dursleys' car.
+　　As Hagrid had said, what would come, would come ... and he would have to meet it when it did. 
+您下载的文件来自http://txt.nokiacn.net糯米社区为你制作
+【糯米社区-TXT论坛】-立志要做最新最全的txt文本格式电子书下载论坛!
 
 ## 4.How many times below words appeared in txt file
 
-Harry -> mountblue@mountblue-pc:~/harrypotter$ grep  -w -c 'Harry' 'Harry Potter and the Goblet of Fire.txt'
+Harry -> 
+mountblue@mountblue-pc:~/harrypotter$ grep  -w -c 'Harry' 'Harry Potter and the Goblet of Fire.txt'
+
 2572
 
-Ron -> mountblue@mountblue-pc:~/harrypotter$ grep  -w -c 'Harry' 'Harry Potter and the Goblet of Fire.txt'
+Ron ->
+mountblue@mountblue-pc:~/harrypotter$ grep  -w -c 'Harry' 'Harry Potter and the Goblet of Fire.txt'
+
 945
 
-Hermione -> mountblue@mountblue-pc:~/harrypotter$ grep  -w -c 'Hermione' 'Harry Potter and the Goblet of Fire.txt'
+Hermione ->
+mountblue@mountblue-pc:~/harrypotter$ grep  -w -c 'Hermione' 'Harry Potter and the Goblet of Fire.txt'
+
 821
 
-Dumbledore -> mountblue@mountblue-pc:~/harrypotter$ grep  -w -c 'Dumbledore' 'Harry Potter and the Goblet of Fire.txt'
+Dumbledore ->
+mountblue@mountblue-pc:~/harrypotter$ grep  -w -c 'Dumbledore' 'Harry Potter and the Goblet of Fire.txt'
+
 500
 
 ## 5.Print from line 100 to 200 from book
@@ -159,7 +185,72 @@ le Vernon called "rabbit food." To make Dudley feel better about it all, Aunt Pe
 ##6. How many unique words are there in the book 
 
 mountblue@mountblue-pc:~/harrypotter$ tr -c '[:alnum:]' '[\n*]' < 'Harry Potter and the Goblet of Fire.txt' | sort | uniq | wc -l
+
 11578
+
+
+  ##  List your browser's process ids (pid) and parent process ids(ppid)
+
+  mountblue@mountblue-pc:~$ pgrep firefox
+  
+  1852
+
+  ## Stop the browser application from the command line
+  ## List the top 3 processes by CPU usage.
+
+  mountblue@mountblue-pc:~$   ps -eo pid, comm,%cpu --sort=-%cpu | head -n 4
+    PIDmm,COMMAND        pu
+   1241mm,pulseaudio     pu
+   1852mm,firefox-bin    pu
+   4688mm,Isolated Web Copu
+
+  ## List the top 3 processes by memory usage.
+  ## Start a Python HTTP server on port 8000
+
+     python3 -m http.server 8000
+
+  ## Start a Python HTTP server on port 90
+      python3 -m http.server 90
+
+      But I get some error/warning
+      Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/usr/lib/python3.10/http/server.py", line 1297, in <module>
+    test(
+  File "/usr/lib/python3.10/http/server.py", line 1248, in test
+    with ServerClass(addr, HandlerClass) as httpd:
+  File "/usr/lib/python3.10/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.10/http/server.py", line 1291, in server_bind
+    return super().server_bind()
+  File "/usr/lib/python3.10/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.10/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+PermissionError: [Errno 13] Permission denied
+
+
+  ## Display all active connections and the corresponding TCP / UDP ports.
+
+  netstat -at
+mountblue@mountblue-pc:~$ netstat -at
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 localhost:domain        0.0.0.0:*               LISTEN     
+tcp        0      0 localhost:ipp           0.0.0.0:*               LISTEN     
+tcp        0      0 mountblue-pc:59110      lb-140-82-113-25-:https ESTABLISHED
+tcp        0      0 mountblue-pc:34782      lb-140-82-113-25-:https ESTABLISHED
+tcp        0      0 mountblue-pc:38456      216.200.232.253:https   ESTABLISHED
+tcp        0      0 mountblue-pc:46074      93.243.107.34.bc.:https ESTABLISHED
+tcp        0      0 mountblue-pc:55288      162.159.136.234:https   ESTABLISHED
+tcp        0      0 mountblue-pc:55288      162.159.136.234:https   ESTABLISHED
+tcp6       0      0 ip6-localhost:ipp       [::]:*                  LISTEN   
+  
+  ## Find the pid of the process that is listening on port 5432
+
 
 
 
