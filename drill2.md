@@ -249,7 +249,25 @@ tcp        0      0 mountblue-pc:55288      162.159.136.234:https   ESTABLISHED
 tcp        0      0 mountblue-pc:55288      162.159.136.234:https   ESTABLISHED
 tcp6       0      0 ip6-localhost:ipp       [::]:*                  LISTEN   
   
-  ## Find the pid of the process that is listening on port 5432
+
+## What's your local IP address?
+
+
+## Find the IP address of google.com
+
+mountblue@mountblue-pc:~$ nslookup google.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+Name:	google.com
+Address: 142.250.195.142
+Name:	google.com
+Address: 2404:6800:4007:81d::200e
+
+## How to check if Internet is working using CLI?
+
+Hit any url with browser command it will act as finding and it can only find if internet is there
 
 
 
