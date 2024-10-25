@@ -79,6 +79,9 @@ mountblue@mountblue-pc:~/hello/five/six/seven$ rm error.log
 mountblue@mountblue-pc:~/hello/one/two/three/three/four$ rm access.log
 
 
+find . -name "*.log" -delete
+
+
 
 
 
