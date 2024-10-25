@@ -184,9 +184,9 @@ le Vernon called "rabbit food." To make Dudley feel better about it all, Aunt Pe
 
 ##6. How many unique words are there in the book 
 
-mountblue@mountblue-pc:~/harrypotter$ tr -c '[:alnum:]' '[\n*]' < 'Harry Potter and the Goblet of Fire.txt' | sort | uniq | wc -l
+mountblue@mountblue-pc:~/harrypotter$ sort 'Harry Potter and the Goblet of Fire.txt' | uniq | wc -l
 
-11578
+6753
 
 
   ##  List your browser's process ids (pid) and parent process ids(ppid)
