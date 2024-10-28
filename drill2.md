@@ -76,6 +76,8 @@ mountblue@mountblue-pc:~/harrypotter$ grep  -w -c 'Dumbledore' 'Harry Potter and
 
 mountblue@mountblue-pc:~/harrypotter$ cat -n 'Harry Potter and the Goblet of Fire.txt' | grep -A100 '\b100\b'
 
+or sed -n '100,200p' "Harr...."
+
 Output will be :-
  100	　　"Invite him inside, Wormtail. Where are your manners?"
    101	　　The cold voice was coming from the ancient armchair before the fire, but Frank couldn't see the speaker. the snake, on the other hand, was curled up on the rotting hearth rug, like some horrible travesty of a pet dog.
